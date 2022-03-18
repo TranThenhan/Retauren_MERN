@@ -1,0 +1,31 @@
+.produit {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin: 20px;
+  float: left;
+}
+
+.produit h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.produit p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+img {
+  height: 220px;
+  width: 220px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

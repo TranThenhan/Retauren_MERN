@@ -1,0 +1,73 @@
+a {
+    text-decoration: none !important;
+}
+
+.header {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    text-transform: uppercase;
+}
+
+.header-left {
+    color: white;
+    margin-left: 20px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.header-right > *:not(:last-child) {
+    color: white;
+}
+
+.order-online {
+    display: flex;
+    padding: 6px 12px;
+    border: 1px solid burlywood;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+
+.order-online > span {
+    align-self: center;
+}
+
+.cart {
+    border-radius: 999px;
+    min-width: 80px;
+    height: 40px;
+    padding: 0 12px;
+    background-color: whitesmoke;
+}
+
+.cart > a {
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.cart > a > *:first-child {
+    height: 40px;
+}
+
+.cart > a > span {
+    align-self: center;
+}
+
+.cart > a > * {
+    color: black;
+}

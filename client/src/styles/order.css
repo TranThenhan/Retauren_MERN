@@ -1,0 +1,17 @@
+.order {
+    display: flex;
+    column-gap: 5px;
+}
+
+.filter {
+    padding-top: 20px;
+    padding-left: 10px;
+    min-width: 200px;
+    background-color: rgb(197, 194, 194);
+}
+
+.filter > p {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
