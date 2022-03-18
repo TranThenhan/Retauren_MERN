@@ -1,4 +1,34 @@
+import bcrypt from 'bcryptjs'
 const data = {
+
+  "users":[
+    {
+      firstName :"admin",
+      lastName :"admin",
+      email:"admin@gmail.com",
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+      adrressNB: '1',
+      addresST: 'admin',
+      ville: 'admin',
+      codePostal:'18000'
+
+    },
+    {
+      firstName :"client1",
+      lastName :"client1",
+      email:"client1@gmail.com",
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+      adrressNB: '1',
+      addresST: 'clien1',
+      ville: 'client1',
+      codePostal:'20000'
+
+    },
+  ],
+
+
   "products":[
     {
       key: 1,
@@ -8,7 +38,8 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sushi"
     },
     {
       key: 2,
@@ -18,7 +49,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sushi"
+
     },
     {
       key: 3,
@@ -28,7 +61,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sushi"
+
     },
     {
       key: 4,
@@ -38,7 +73,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sashimi"
+
     },
     {
       key: 5,
@@ -48,7 +85,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sushi"
+
     },
     {
       key: 6,
@@ -58,7 +97,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Sashimi"
+
     },
     {
       key: 7,
@@ -68,7 +109,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "Other"
+
     },
     {
       key: 8,
@@ -78,7 +121,9 @@ const data = {
       description:
         "Japanese dish",
       prix:"5$",
-      quantity: "5"
+      quantity: "5",
+      category: "sashimi"
+
     },
   ]
     
