@@ -26,8 +26,9 @@ function SigninScreen() {
       })
       console.log(data)
     }catch (err){
-
+      alert('Invalid email or password')
     }
+
   }
 
   return (
@@ -52,7 +53,7 @@ function SigninScreen() {
           <Button type='submit' variant="primary" size="lg">Sign in</Button>
         </div>
         New customer?{' '}
-        <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+        <a href='/signup'>Create your account</a>
 
         <p className="mt-5 text-muted">&copy; 2022</p>
 

@@ -23,7 +23,7 @@ function Produit(props: any) {
         {props.reference}. {props.title}
       </h1>
       <div className="action">
-        <strong><p>{props.prix}</p></strong>
+        <strong><p>{props.prix}$</p></strong>
         <div>
           <button onClick={DecreaseItem}>-</button>
           <span> {num} </span>

@@ -37,7 +37,7 @@ const data = {
       title: "Sushi saumon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sushi"
     },
@@ -48,7 +48,7 @@ const data = {
       title: "California roll saumon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sushi"
 
@@ -60,7 +60,7 @@ const data = {
       title: "Maki saumon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sushi"
 
@@ -72,7 +72,7 @@ const data = {
       title: "Sashimi thon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sashimi"
 
@@ -84,7 +84,7 @@ const data = {
       title: "Temaki saumon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sushi"
 
@@ -96,7 +96,7 @@ const data = {
       title: "Chirashi saumon",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix:"5",
       quantity: "5",
       category: "Sashimi"
 
@@ -108,8 +108,8 @@ const data = {
       title: "Shake roll",
       description:
         "Japanese dish",
-      prix:"5$",
-      quantity: "5",
+      prix:"5",
+      quantity: "0",
       category: "Other"
 
     },
@@ -120,7 +120,7 @@ const data = {
       title: "California tempura",
       description:
         "Japanese dish",
-      prix:"5$",
+      prix: "5",
       quantity: "5",
       category: "sashimi"
 

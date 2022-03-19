@@ -1,0 +1,22 @@
+
+#main-container {
+    place-items: center center;
+    margin-top: 0px;
+  }
+  
+  #sign-in-form {
+    max-width: 30%;
+  }
+  
+  .bootstrap-logo {
+    width: 50%;
+    height: auto;
+  }
+  
+  .form-control:focus {
+    z-index: 5;
+  }
+
+  .login{
+    margin: 2%;
+  }
