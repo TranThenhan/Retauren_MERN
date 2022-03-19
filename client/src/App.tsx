@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Main from './components/main';
 import Cart from './components/cart';
 import Order from './components/order';
+import SigninScreen from './screens/signinScreen'
+
 
 import './App.css';
 
@@ -14,6 +16,7 @@ function App() {
       <Route path='/' element={<Main/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/order' element={<Order/>} />
+      <Route path='/signin' element={<SigninScreen/>} />
     </Routes>
     // <div className="App">
     //   <header className="App-header">

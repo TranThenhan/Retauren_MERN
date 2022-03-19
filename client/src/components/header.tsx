@@ -11,6 +11,7 @@ const Header = () => {
       <div className="header-right">
         <a href="./">Home</a>
         <a href="./">Gallery</a>
+        <a href="./signin">Sign In</a>
         <a href="./order" className="order-online">
           <span>Order Online</span>
         </a>
