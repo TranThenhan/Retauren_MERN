@@ -1,12 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import {  useLocation } from 'react-router-dom';
 import '../styles/signupScreen.css';
 import Header from '../components/header';
 import  Axios  from 'axios';
 import { useState } from 'react';
-import { Toast } from 'react-bootstrap';
 
 function SignupScreen() {
   const [firstName, setFristName] = useState('')
@@ -28,7 +26,7 @@ function SignupScreen() {
       return
     }
     try {
-      const {data} = await Axios.post('/api/users/signup', {
+      const {data} = await Axios.post('http://localhost:5000/api/users/signup', {
         firstName,
         lastName,
         email,

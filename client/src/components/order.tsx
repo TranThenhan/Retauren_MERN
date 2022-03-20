@@ -20,11 +20,11 @@ interface CategoryFilter {
 
 function Order() {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
   useEffect(()=>{
     const fetchData = async () => {
-      const result = await axios.get('/api/products')
-      setProducts(result.data)
+      const result = await axios.get('http://localhost:5000/api/products');
+      setProducts(result.data);
     }
     fetchData()
   }, [])
@@ -61,7 +61,7 @@ function Order() {
         </div>
         <div>
           {products.map((product) => (
-
+            // product['quantity'] > 0 && 
             <Produit
               key={product['key']}
               img={product['image']}
@@ -71,7 +71,6 @@ function Order() {
               prix={product['prix']}
               quantity={product['quantity']}
               />
-
           ))}
         </div>
       </div>

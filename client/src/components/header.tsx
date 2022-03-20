@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "../styles/header.css";
 
 const Header = () => {
+  const [num, setNum] = useState(JSON.parse(localStorage.getItem('cart') || '{}'))
+
   return (
     <div className="header">
       <div className="header-left">
@@ -10,8 +14,6 @@ const Header = () => {
       </div>
       <div className="header-right">
         <a href="./">Home</a>
-        <a href="./">Gallery</a>
-        <a href="./signin">Sign In</a>
         <a href="./order" className="order-online">
           <span>Order Online</span>
         </a>
@@ -19,9 +21,10 @@ const Header = () => {
           <a href="./cart">
             <ShoppingCartIcon />
             <span> • </span>
-            <span>{0}</span>
+            <span>{num.length}</span>
           </a>
         </div>
+        <a href="./signin">Sign In</a>
       </div>
     </div>
   );

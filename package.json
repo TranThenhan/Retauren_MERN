@@ -1,0 +1,28 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-scripts": "^5.0.0",
+    "react-router-dom": "^6.2.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.6.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baosonnguyendang/restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baosonnguyendang/restaurant/issues"
+  },
+  "homepage": "https://github.com/baosonnguyendang/restaurant#readme"
+}

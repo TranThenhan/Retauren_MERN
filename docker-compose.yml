@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+  api:
+    image: node-api
+    ports:
+      - "5000:5000"
+    networks: 
+      - project-restau
+  client:
+    image: react-client
+    ports:
+      - "3000:3000"
+    networks:
+      - project-restau
+
+networks:
+  project-restau:
+    driver: bridge
