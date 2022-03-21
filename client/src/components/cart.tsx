@@ -27,7 +27,7 @@ const style = {
 const Cart = () => {
   var t = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart") || "{}").reduce((prev: any, curr: any) => prev + curr["num"] * Number(curr["prix"]), 0) : 0;
   //const cartData = localStorage.getItem("cart");
-  const [parsedCartData, setParsedCartData] = useState<any[]>([]);
+  const [parsedCartData, setParsedCartData] = useState<any[]>([]); // c'est bien d'avoir tenté typescript mais any n'est pas très utile
   const [cartData, setCartData] = useState(localStorage.getItem("cart"));
 
   useEffect(() => {
@@ -92,9 +92,11 @@ const Cart = () => {
   //click order now button
   const orderNow = (): void => {
     const data = { parsedCartData, clientData };
-    console.log(data);
+    console.log(data); // todo
   };
 
+  // évitez de faire des lignes trop longues, c'est très dur à lire !
+  // comme vu en cours JSON.parse doit être placé dans un try / catch
   //total money
   const [total, setTotal] = useState(localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart") || "{}").reduce((prev: any, curr: any) => prev + curr["num"] * Number(curr["prix"]), 0) : 0);
   const totalCal = (): number => {

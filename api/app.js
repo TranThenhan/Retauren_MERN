@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import data from './data.js'
+import data from './data.js' // non utilisé ici
 import mongoose  from 'mongoose';
 import dotenv from 'dotenv'
 import seedRouter from './routes/seedRoutes.js'
@@ -27,7 +27,7 @@ app.use('/api/products', productRouter)
 app.use('/api/users', userRouter)
 
 
-app.use((err, req, res, next)=>{
+app.use((err, req, res)=>{ // pas de next ici
     res.status(500).send({message: err.message})
 })
 

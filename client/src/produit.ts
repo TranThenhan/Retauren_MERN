@@ -1,4 +1,4 @@
-const produit = [
+const produit = [ // cette liste devrait venir depuis l'API, fichier à supprimer donc
     {
       key: 1,
       image: "https://www.academiedugout.fr/images/50789/1200-686/10023-nigiri-sushi.jpg?poix=50&poiy=50",
