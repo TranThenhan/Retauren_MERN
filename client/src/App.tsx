@@ -20,7 +20,7 @@ function App() {
       <Route path='/signin' element={<SigninScreen/>} />
       <Route path='/signup' element={<SignupScreen/>} />
 
-    </Routes>
+    </Routes> // commentaires à supprimer
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />

@@ -19,7 +19,7 @@ function SignupScreen() {
   // const redirectInUrl = new URLSearchParams(search).get('redirect')
   // const redirect = redirectInUrl ? redirectInUrl: '/'
   
-  const submitHandler = async (e: any) => {
+  const submitHandler = async (e: any) => { // e --> event
     e.preventDefault()
     if (password !== confirmPassword){
       alert('Passwords do not match')

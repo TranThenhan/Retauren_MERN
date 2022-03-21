@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcryptjs' // bonne idée de faire un fichier avec les données de la database
 const data = {
 
   "users":[
