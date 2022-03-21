@@ -6,7 +6,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-
+import axios from "axios";
 import Header from "./header";
 
 import "../styles/cart.css";
@@ -77,12 +77,13 @@ const Cart = () => {
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [street, setStreet] = useState("");
-  const [city, setCity] = useState("");
-  const [code, setCode] = useState("");
+  const [addressNB, setaddressNB] = useState("");
+  const [addressST, setAddressST] = useState("");
+  const [ville, setville] = useState("");
+  const [codePostal, setcodePostal] = useState("");
 
-  var clientData = { lastName, firstName, email, phone, street, city, code };
+  var clientData = { lastName, firstName, email, addressNB, addressST, ville, codePostal };
+
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -90,9 +91,21 @@ const Cart = () => {
   };
 
   //click order now button
-  const orderNow = (): void => {
-    const data = { parsedCartData, clientData };
-    console.log(data);
+  const orderNow = async (e: any) => {
+    e.preventDefault();
+    
+    const data_order = { parsedCartData, clientData };
+    console.log(data_order)
+    alert("Order successfully, Please wait for confirm")
+    try {
+      const { data } = await axios.post("http://localhost:5000/api/command/confirm", {
+        data_order
+      });
+      console.log(data);
+      alert("sign in successfully")
+    } catch (err) {
+    }
+
   };
 
   //total money
@@ -153,7 +166,7 @@ const Cart = () => {
         </div>
         <div className="product-info">
           <div className="info">
-            <Button onClick={handleOpen}>Edit info</Button>
+            <Button onClick={handleOpen}>Edit Information</Button>
             <Modal open={open} onClose={handleClose}>
               <Box sx={style}>
                 <form onSubmit={handleSubmit}>
@@ -182,35 +195,35 @@ const Cart = () => {
                     />
                   </label>
                   <label>
-                    <span>Telephone:</span>
+                    <span>AddressNB:</span>
                     <input
                       type="text"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      value={addressNB}
+                      onChange={(e) => setaddressNB(e.target.value)}
                     />
                   </label>
                   <label>
-                    <span>Street:</span>
+                    <span>AddressST:</span>
                     <input
                       type="text"
-                      value={street}
-                      onChange={(e) => setStreet(e.target.value)}
+                      value={addressST}
+                      onChange={(e) => setAddressST(e.target.value)}
                     />
                   </label>
                   <label>
-                    <span>City:</span>
+                    <span>Ville:</span>
                     <input
                       type="text"
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
+                      value={ville}
+                      onChange={(e) => setville(e.target.value)}
                     />
                   </label>
                   <label>
-                    <span>Postal code:</span>
+                    <span> Code Postal:</span>
                     <input
                       type="text"
-                      value={code}
-                      onChange={(e) => setCode(e.target.value)}
+                      value={codePostal}
+                      onChange={(e) => setcodePostal(e.target.value)}
                     />
                   </label>
                   <br />
@@ -236,7 +249,7 @@ const Cart = () => {
               <span>Total:</span>
               <span>{total === 0 ? t : total + 5}$</span>
             </div>
-            <button onClick={() => orderNow}>Order now</button>
+            <button onClick={orderNow}>Order now</button>
           </div>
         </div>
       </div>

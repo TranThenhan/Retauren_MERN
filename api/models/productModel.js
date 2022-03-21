@@ -10,6 +10,7 @@ const productShema = new mongoose.Schema(
         description: {type:String, required: true},
         prix: {type: String, required: true},
         quantity: {type: Number, required: true},
+        num: {type: Number},
         category:{type: String, required: true}
 
     },
@@ -21,3 +22,4 @@ const productShema = new mongoose.Schema(
 
 const Product = mongoose.model('Product', productShema)
 export default Product;
+export {productShema}
